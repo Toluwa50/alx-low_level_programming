@@ -1,19 +1,25 @@
-#include "main.h"
+#include" main.h"
 
 /**
- *main - print_alphabet
- * Return: 0
+ * print_alphabet__x10 - prints alphabet 10 time
+ * Return: void
  */
 
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
-	char c = 'a';
+	char c;
+	int i = 0;
 
-
-	while (c <= 'z')
+	while (i < 10)
 	{
-		_putchar(c);
-		c++;
+		c = 'a';
+
+		while (c <= 'z')
+		{
+			_putchar(c);
+			c++;
+		}
+		_putchar('\n');
+		i++;
 	}
-	_putchar('\n');
 }
