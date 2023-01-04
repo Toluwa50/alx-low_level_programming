@@ -1,27 +1,19 @@
 /**
- * _strchr - a function that locates a character in a string
+ * _memcpy - function that copies memory area
  *
- * @s: pointer to our string array input
- * @c: character to locate from input array
+ * @dest: buffer where we will copy to
+ * @src: what we are to copy
+ * @n: n bytes of @src
  *
- * Return: first occurence of charatcer or null if not found
+ * Return: Always 0 (Success)
 */
 
-char *_strchr(char *s, char c)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	while (*s != '\0')
-	{
-		if (*s == c)
-			return (s);
-		s++;
-	}
-	/**
-	 * if c is '\0', you should return
-	 * the pointer to the '\0' of the
-	 * string s
-	*/
-	if (*s == c)
-		return (s);
-	/return null if not found/
-	return ('\0');
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+		dest[i] = src[i];
+	return (dest);
 }
+
